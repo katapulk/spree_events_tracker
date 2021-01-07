@@ -31,3 +31,5 @@ module Spree::OrdersControllerDecorator
     current_order_includes_previous_state? || previous_state.eql?('cart')
   end
 end
+
+::Spree::OrdersController.prepend(Spree::OrdersControllerDecorator)
