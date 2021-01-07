@@ -1,7 +1,7 @@
 module Spree::HomeControllerDecorator
   def self.prepended(base)
     base.include Spree::PageTracker
-    track_actions [:index]
+    base.track_actions [:index]
   end
 end
 
